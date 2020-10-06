@@ -1,10 +1,10 @@
 ---
 
 python_pip_packages:
-  - python-pip
+  - "{% if ansible_distribution == 'Ubuntu' and ansible_distribution_version is version_compare('20.04', '>=') %}python3-pip{% else %}python-pip{% endif %}"
 
 python_sni_support_packages:
-  - python-dev
+  - "{% if ansible_distribution == 'Ubuntu' and ansible_distribution_version is version_compare('20.04', '>=') %}python3-dev{% else %}python-dev{% endif %}"
   - libssl-dev
   - libffi-dev
 
