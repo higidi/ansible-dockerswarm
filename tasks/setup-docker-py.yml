@@ -6,3 +6,4 @@
     version: "{{ docker_py_package_version }}"
     state: "{{ docker_py_package_state }}"
     executable: "{{ python_pip_executable }}"
+    virtualenv_python: "{{ python_executable }}"

@@ -2,7 +2,7 @@
 
 python_pip_packages:
   - "{% if ansible_distribution == 'Ubuntu' and ansible_distribution_version is version_compare('20.04', '>=') %}python3-pip{% else %}python-pip{% endif %}"
-
+python_executable: "/usr/bin/{% if ansible_distribution == 'Ubuntu' and ansible_distribution_version is version_compare('20.04', '>=') %}python3{% else %}python{% endif %}"
 python_pip_executable: "/usr/bin/{% if ansible_distribution == 'Ubuntu' and ansible_distribution_version is version_compare('20.04', '>=') %}pip3{% else %}pip{% endif %}"
 
 python_sni_support_packages:
