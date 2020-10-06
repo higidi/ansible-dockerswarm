@@ -5,3 +5,4 @@
     name: "{{ docker_py_package_name }}"
     version: "{{ docker_py_package_version }}"
     state: "{{ docker_py_package_state }}"
+    executable: "{{ python_pip_executable }}"
